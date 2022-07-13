@@ -1,0 +1,94 @@
+<!-- 有数据的时候显示 -->
+<block wx:if="{{showitem}}">
+	<!-- 策略选择 -->
+	<view class="qnn-content-list">
+		<view class="qnn-bar-title">
+			<view class="qnn-title-left">策略选择</view>
+			<view class="qnn-title-right">查看全部<text class="icon-right"></text></view>
+		</view>
+		<block wx:for="{{xiaoshuocontent}}" wx:key="index">
+			<view class="qnn-content" bindtap="gotoDetails" data-coverImg="{{item.albumCoverUrl290}}"
+				data-title="{{item.title}}">
+				<view class="qnn-content-img">
+					<image src="{{item.albumCoverUrl290}}" mode="widthFix"></image>
+				</view>
+				<view class="qnn-content-right">
+					<view class="qnn-content-title">
+						<view class="qnn-title-text">{{item.title}}</view>
+						<view class="qnn-introduction">{{item.trackTitle}}</view>
+					</view>
+					<view class="qnn-count">
+						<view class="qnn-play-count">
+							<!-- <text class="icon-"></text> -->
+							浏览126次
+						</view>
+						<view class="qnn-ji-count">{{item.tracks}}人使用</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+	<!-- 金牌讲师 -->
+	<view class="qnn-content-list">
+		<view class="qnn-bar-title">
+			<view class="qnn-title-left">金牌讲师</view>
+			<view class="qnn-title-right">查看全部<text class="icon-right"></text></view>
+		</view>
+		<block wx:for="{{xiangshengcontent}}" wx:key="index">
+			<view class="qnn-content" bindtap="gotoDetails" data-coverImg="{{item.albumCoverUrl290}}"
+				data-title="{{item.title}}">
+				<view class="qnn-content-img">
+					<image src="{{item.albumCoverUrl290}}" mode="widthFix"></image>
+				</view>
+				<view class="qnn-content-right">
+					<view class="qnn-content-title">
+						<view class="qnn-title-text">{{item.title}}</view>
+						<view class="qnn-introduction">{{item.trackTitle}}</view>
+					</view>
+					<view class="qnn-count">
+						<view class="qnn-play-count">
+							<!-- <text class="icon-"></text> -->
+							浏览126次
+						</view>
+						<view class="qnn-ji-count">{{item.tracks}}人关注</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+	<!-- 模型精选 -->
+	<view class="qnn-content-list">
+		<view class="qnn-bar-title">
+			<view class="qnn-title-left">模型精选</view>
+			<view class="qnn-title-right">查看全部<text class="icon-right"></text></view>
+		</view>
+		<block wx:for="{{tuokocontent}}" wx:key="index">
+			<view class="qnn-content" bindtap="gotoDetails" data-coverImg="{{item.albumCoverUrl290}}"
+				data-title="{{item.title}}">
+				<view class="hmly-content-img">
+					<image src="{{item.albumCoverUrl290}}" mode="widthFix" lazy-load="false"></image>
+				</view>
+				<view class="qnn-content-right">
+					<view class="qnn-content-title">
+						<view class="qnn-title-text">{{item.title}}</view>
+						<view class="qnn-introduction">{{item.trackTitle}}</view>
+					</view>
+					<view class="qnn-count">
+						<view class="qnn-play-count">
+							<!-- <view class="icon-"></view> -->
+							3亿浏览
+						</view>
+						<view class="qnn-ji-count">{{item.tracks}}人使用</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</block>
+<block wx:else>
+	<view class="qnn-data-notip">
+		<view class="qnn-tip">
+			网络暂时走丢了，请稍后再试
+		</view>
+	</view>
+</block>

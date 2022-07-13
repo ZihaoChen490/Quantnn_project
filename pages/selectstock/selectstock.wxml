@@ -1,0 +1,29 @@
+<!--pages/selectstock/selectstock.wxml-->
+
+<view><text>{{title}}</text></view>>
+<navigator open-type="navigateBack" delta="1">后退至QG社区</navigator>>
+
+<view class="yanbao-item" wx:for="{{yanbaolist}}" wx:key="id">
+  <view class="thumb">
+  <image src="{{item.images[0]}}"></image>
+  </view>
+    <view class="info">
+      
+    </view>
+</view>
+
+
+<view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">股票代码</view>
+          <view class="th th2">模型种类</view>
+          <view class="th th3">目标时间段</view>
+      </view>
+      <view class="tr" wx:for="{{15}}">
+          <view class="td td1">2018/02/12</view>
+          <view class="td td2">11:30</view>
+          <view class="td td3">本次对海煞造成了100000点伤害</view>
+      </view>
+    </view>
+ </view>

@@ -1,0 +1,36 @@
+<!-- 搜索框 -->
+<view class="qnn-search">
+	<view class="qnn-search-left">
+		<text class="icon-search"></text>
+		<input placeholder="搜索你想要的工具" bindconfirm="search"></input>
+	</view>
+	<view class="qnn-search-right" bindtap="cancelSearch">取消</view>
+</view>
+<!-- 搜索历史 -->
+<view class="qnn-history" wx:if="{{searchHistory.length}}">
+	<!-- 提示标题 -->
+	<view class="qnn-title">
+		<view class="qnn-title-text">搜索历史</view>
+		<text class="icon-delete text-gray" bindtap="clearHistory"></text>
+	</view>
+	<!-- 内容 -->
+	<view class="qnn-history-content">
+		<view class="qnn-content-item bg-gray text-black" wx:for="{{searchHistory}}" wx:key="index">{{item}}</view>
+	</view>
+</view>
+<!-- 热门搜索 -->
+<view class="qnn-hot">
+	<!-- 提示标题 -->
+	<view class="qnn-title">
+		<view class="title-text">热门搜索</view>
+	</view>
+	<view class="qnn-hot-content">
+		<view class="qnn-hot-items" wx:for="{{hotData}}" wx:key="index">
+			<view class="qnn-item-left">
+				<view class="{{index < 3 ? 'text-red' : ''}}">{{index + 1}}</view>
+				<view class="qnn-item-title text-black">{{item.title}}</view>
+			</view>
+			<text class="{{item.icon}} {{item.color}}"></text>
+		</view>
+	</view>
+</view>

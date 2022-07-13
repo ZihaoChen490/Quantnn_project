@@ -1,0 +1,3 @@
+<!--pages/polices/gotouse/gotouse.wxml-->
+<text>pages/polices/gotouse/gotouse.wxml</text>
+<navigator open-type="navigateBack" delta="1">后退至策略</navigator>>

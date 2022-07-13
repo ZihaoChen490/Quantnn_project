@@ -1,0 +1,57 @@
+  <view class="content-box">
+	<view class="head">
+		<text class="head-title">QG社区</text>
+	</view>
+
+  <search></search>
+
+
+<!--宫格导航--> 
+<view class="qnn-nav">
+	<block>
+		<navigator 
+		class="qnn-nav-item" 
+		url="pages/{{item.path}}/{{item.path}}?title=redirect" 
+		hover-class="other-navigator-hover"
+		open-type="redirect"
+		wx:for="{{navList}}" 
+
+		wx:key="cate" 
+		bindtap="{{item.events}}"
+		data-index="{{index}}"
+		>
+			<image class="qnn-nav-icon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
+		</navigator>
+
+
+	</block>
+</view>
+
+
+
+<!-- 往期话题 -->
+	<view class="box">
+		<view wx:for="{{holes}}" wx:key="item" class="box-item" data-id="{{item.id}}" bindtap="gotoDetail">
+			<image class="item-poster" mode="aspectFill" src="{{item.poster + '?imageView2/1/w/335/h/190'}}" lazy-load />
+			<view class="box-right">
+				<view class="item-title">{{item.title}}</view>
+				<view class="item-tip">{{item.total_content + '条动态'}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 加载更多 -->
+<l-loadmore wx:if="{{!isEnd}}" show="{{loading}}" line />
+<navigator url="/pages/yanbao/yanbao">研报</navigator>
+<navigator url="/pages/instructions/instructions">说明书</navigator>
+<navigator url="/pages/videolessons/videolessons">视频课程</navigator>
+
+
+<view calss='box' wx:for="{{colorList}}" wx:key="index"
+style="background-color: rgba();">
+</view>
+<!-- nothing -->
+<nothing wx:if="{{holes.length == 0}}" pic="../../images/icon_nothing/pic_hole.png" tip="暂时没有树洞" />
+
+

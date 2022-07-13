@@ -1,0 +1,6 @@
+<!--pages/selecttime/selecttime.wxml-->
+
+<navigator open-type="navigateBack" delta="1">回到社区</navigator>>
+
+ <dynamicform formConfig="{{formSelectTimeCofig}}" bind:hanldeFormData="onHanldeFormData"></dynamicform>
+

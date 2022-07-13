@@ -1,0 +1,26 @@
+<!--pages/instructions/instructions.wxml-->
+<view><text>{{title}}</text></view>>
+<navigator open-type="navigateBack" delta="1">后退至QG社区</navigator>>
+<block wx:if="{{showLoading}}">
+    <view class="loading">玩命加载中…</view>
+</block>
+<block wx:else>
+    <scroll-view scroll-y="true" style="height: {{windowHeight}}rpx" scroll-top="{{scrollTop}}" bindscroll="scroll" bindscrolltolower="scrolltolower">
+        <view class="blog">
+            <block wx:for="{{blogs}}" wx:for-index="blogIndex" wx:for-item="blogItem" wx:key="blog">
+                <view data-id="{{blogItem.id}}" catchtap="viewBlogDetail" class="flex box box-lr item">
+                  <view class="flex item_left">
+                    <view><text class="title">{{blogItem.title}}</text></view>
+                    <view><text class="sub_title">{{blogItem.date}}</text></view>
+                  </view>
+                </view> 
+            </block>
+            <block wx:if="{{hasMore}}">
+                <view class="loading-tip">拼命加载中…</view>
+            </block>
+            <block wx:else>
+                <view class="loading-tip">没有更多内容了</view>
+            </block>
+        </view>
+    </scroll-view>
+</block>

@@ -1,0 +1,14 @@
+{
+  "usingComponents":{
+    "navigationBar":"/components/navigationBar/index",
+    "search": "/components/search/search"
+    
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "QG社区",
+  "navigationStyle":"custom",
+  "backgroundColor":"#efefef",
+  "enablePullDownRefresh":true
+  
+}

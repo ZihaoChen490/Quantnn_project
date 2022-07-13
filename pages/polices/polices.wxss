@@ -1,0 +1,40 @@
+/* pages/polices/polices.wxss */
+.polices-swiper-container {
+  width:100%;
+height:350rpx;
+text-align: center;
+}
+
+.polices-swiper-item{
+width: 100%;
+height: 100%;
+line-height: 150px;
+text-align: center;
+}
+
+.grid-list{
+  display:flex;
+flex-wrap: wrap;
+
+}
+
+.grid-item{
+  width:25%;
+  height: 200rpx;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item image{
+  width: 100rpx;
+  height:100rpx;
+
+}
+
+.grid-item text{
+  font-size: 20rpx;
+  width: 50rpx;
+  height:50rpx;
+}
