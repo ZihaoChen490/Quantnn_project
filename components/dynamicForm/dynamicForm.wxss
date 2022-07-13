@@ -1,0 +1,78 @@
+/* components/dynamicForm/dynamicForm.wxss */
+.title {
+  cursor: default;
+  user-select: none;
+  line-height: 1.6;
+  --height: 44px;
+  --right: 95px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  margin: 0;
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hd {
+  cursor: default;
+  user-select: none;
+  line-height: 1.6;
+  --height: 44px;
+  --right: 95px;
+  font-size: 16px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  margin: 0;
+  display: block;
+  padding: 40px;
+}
+
+.desc {
+  cursor: default;
+  user-select: none;
+  line-height: 1.6;
+  --height: 44px;
+  --right: 95px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  margin: 0;
+  display: block;
+  margin-top: 5px;
+  color: #888888;
+  text-align: left;
+  font-size: 14px;
+}
+
+.agreeCheckBox {
+  cursor: default;
+  user-select: none;
+  line-height: 1.6;
+  --height: 44px;
+  --right: 95px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, .5);
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  position: absolute;
+  left: -9999px;
+}
+
+.agreeCheckBoxIcon {
+  cursor: default;
+  user-select: none;
+  line-height: 1.6;
+  --height: 44px;
+  --right: 95px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, .5);
+  margin: 0;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  border: 1px solid #d1d1d1;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 11px;
+  height: 11px;
+}

@@ -1,0 +1,4 @@
+<!--components/dynamicForm/my-uploader/my-uploader.wxml-->
+<mp-cell prop="mobile" title="" ext-class=" weui-cell_vcode">
+    <mp-uploader id="{{formitem.id}}" title="{{formitem.title}}" bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" bindselect="chooseImage" files="{{files}}" max-count="{{formitem.settings.maxcount}}" tips="{{formitem.settings.tips}}"></mp-uploader>
+</mp-cell>

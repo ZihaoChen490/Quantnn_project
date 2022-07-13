@@ -1,0 +1,14 @@
+<!--components/dynamicForm/my-picker-date/my-picker-date.wxml-->
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd" style="width: 105px">
+            <picker data-field="{{formitem.id}}" mode="{{formitem.settings.mode}}" value="{{date}}" start="{{formitem.settings.start}}" end="{{formitem.settings.end}}" bindchange="_timeChange" id="{{formitem.id}}">
+                <view class="weui-select">
+                    {{formitem.settings.title}}</view>
+            </picker>
+        </view>
+        <view class="weui-cell__bd weui-cell__bd_in-select-before">
+            <input data-field="{{formitem.settings.pickerId}}" class="weui-input" placeholder="{{date}}" bindchange="bindTimeChange" />
+        </view>
+    </view>
+</view>

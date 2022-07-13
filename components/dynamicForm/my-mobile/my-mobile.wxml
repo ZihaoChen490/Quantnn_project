@@ -1,0 +1,6 @@
+<!--components/dynamicForm/my-mobile/my-mobile.wxml-->
+<mp-cell prop="mobile" title="" ext-class=" weui-cell_vcode">
+    <input bindinput="bindInputChange" data-field="mobile" class="weui-input" placeholder="请输入手机号" />
+    <view slot="footer" class="weui-vcode-btn" bindtap="getSmsCode">获取验证码</view>
+
+</mp-cell>

@@ -1,0 +1,16 @@
+<!--components/dynamicForm/my-vcode/my-vcode.wxml-->
+<mp-cell prop="vcode" title="" ext-class=" weui-cell_vcode">
+    <input 
+    bindinput="bindInputChange" 
+    data-field="{{formitem.settings.dataField}}" 
+    class="weui-input" 
+    placeholder="请输入验证码"/>
+    <image 
+        slot="footer" 
+        class="weui-vcode-img" 
+        src="data:image/png;base64,{{imageData}}" 
+        style="width: 108px"
+        bindtap="getVcode"
+        >
+    </image>
+</mp-cell>

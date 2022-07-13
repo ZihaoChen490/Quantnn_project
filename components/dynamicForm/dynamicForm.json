@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "my-picker-input": "./my-picker-input/my-picker-input",
+        "my-picker-date": "./my-picker-date/my-picker-date",
+        "mp-uploader": "weui-miniprogram/uploader/uploader",
+        "my-vcode": "./my-vcode/my-vcode",
+        "my-uploader": "./my-uploader/my-uploader",
+        "my-mobile": "./my-mobile/my-mobile",
+        "my-multiselector": "./my-multiselector/my-multiselector"
+    }
+}

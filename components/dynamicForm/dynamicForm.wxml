@@ -1,0 +1,104 @@
+<!--components/dynamicForm/dynamicForm.wxml-->
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd hd">
+        <view class="page__title title">{{formConfig.title}}</view>
+        <view class="page__desc desc">{{formConfig.desc}}</view>
+    </view>
+    <view class="page__bd">
+        <mp-form id="form" bindsuccess="validateSuccess" rules="{{formConfig.rules}}" models="{{formData}}">
+            <block wx:for="{{formConfig.formInfo}}" wx:for-index="index" wx:for-item="formitem" wx:key="id">
+                <!--每个元组件都需要传递id和当前组件全部的信息 便于元组件内部解析-->
+                <!-- 列表选择 -->
+                <block wx:if="{{formitem.type==='checkbox' }}">
+                    <mp-cells title="{{formitem.title}}">
+                        <mp-checkbox-group 
+                        prop="{{formitem.settings.prop}}" 
+                        multi="{{formitem.settings.multi}}" bindchange="_getAndSetFormData" data-field="{{formitem.id}}">
+                            <mp-checkbox wx:for="{{formitem.settings.options}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                        </mp-checkbox-group>
+                    </mp-cells>
+                </block>
+                <block wx:if="{{formitem.type==='input'}}">
+                    <mp-cells title="{{formitem.title}}" footer="{{formitem.settings.footer}}">
+                        <mp-cell prop="{{formitem.settings.prop}}" title="{{formitem.settings.title}}" ext-class="">
+                            <input data-field="{{formitem.id}}" bindinput="_getAndSetFormData" class="weui-input" placeholder="{{formitem.settings.placeHolder}}" />
+                        </mp-cell>
+                    </mp-cells>
+                </block>
+                <block wx:if="{{formitem.type==='date'}}">
+                    <view class="weui-cells__title">{{formitem.title}}</view>
+                    <my-picker-date formitem="{{formitem}}" bind:bindPickerChange="_dataFromComponent"></my-picker-date>
+                </block>
+                <block wx:if="{{formitem.type === 'picker-input'}}">
+                    <view class="weui-cells__title">{{formitem.title}}</view>
+                    <my-picker-input formitem="{{formitem}}" bind:bindPickerChange="_dataFromComponent"></my-picker-input>
+                </block>
+                <block wx:if="{{formitem.type === 'multiselector'}}">
+                    <view class="weui-cells__title">{{formitem.title}}</view>
+                    <my-picker-input formitem="{{formitem}}" bind:bindPickerChange="_dataFromComponent"></my-picker-input>
+                </block>           
+                <block wx:if="{{formitem.type === 'text'}}">
+                    <view class="weui-cells__title">{{formitem.title}}</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">
+                                <input bindinput="_getAndSetFormData" class="weui-input" placeholder="{{formitem.settings.placeHolder}}" data-field="{{formitem.id}}" />
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{formitem.type === 'textarea'}}">
+                    <view class="weui-cells__title">{{formitem.title}}</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">
+                                <textarea class="weui-textarea" placeholder="{{formitem.settings.placeHolder}}" bindinput="_getAndSetFormData" style="height: 3.3em" data-field="{{formitem.id}}" />
+                                <view class="weui-textarea-counter">{{formitem.settings.warn}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{formitem.type === 'uploader'}}">
+                    <view class="weui-cells__title">{{formitem.title}}</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell">
+
+                            <view class="weui-cell__bd">
+                                <my-uploader formitem="{{formitem}}" bind:bindPickerChange="_dataFromComponentById"></my-uploader>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{formitem.type === 'vcode'}}">
+                    <mp-cells>
+                        <mp-cell prop="vcode" title="{{formitem.title}}" ext-class=" weui-cell_vcode">
+                            <my-vcode bind:bindPickerChange="_dataFromComponentById" formitem="{{formitem}}"></my-vcode>
+                        </mp-cell>
+                    </mp-cells>
+                </block>
+                <block wx:if="{{formitem.type === 'mobile'}}">
+                    <mp-cells>
+                        <mp-cell prop="mobile" title="{{formitem.title}}" ext-class=" weui-cell_vcode">
+                            <my-mobile formitem="{{formitem}}" bind:bindPickerChange="_dataFromComponent"></my-mobile>
+                        </mp-cell>
+                    </mp-cells>
+
+                </block>
+            </block>
+            <checkbox-group bindchange="bindAgreeChange" class="checkBoxGroup">
+                <label class="weui-agree agree" for="weuiAgree">
+                    <view class="weui-agree__text agreeText">
+                        <checkbox class="weui-agree__checkbox agreeCheckBox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+                        <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+                        <view class="weui-agree__checkbox-icon agreeCheckBoxIcon" wx:if="{{!isAgree}}">
+                        </view>阅读并同意<navigator url="{{formConfig.agreeLink}}" class="weui-agree__link">《相关条款》</navigator>
+                    </view>
+                </label>
+            </checkbox-group>
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+            </view>
+        </mp-form>
+    </view>
+</view>
