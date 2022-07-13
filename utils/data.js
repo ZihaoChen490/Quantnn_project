@@ -1,0 +1,126 @@
+const ificationContent = [
+  {
+    title:"最热策略",
+    content:[
+      {text:"Bert"},
+      {text:"StockRanker"},
+      {text:"GCN"}
+    ]
+  },
+  {
+    title:"树模型",
+    content:[
+      {text:"ID3"},
+      {text:"C4.5"},
+      {text:"CART"},
+      {text:"LightGBM"}
+        ]
+  },
+  {
+    title:"Bagging",
+    content:[
+      {text:"线性回归"},
+      {text:"逻辑回归"},
+      {text:"Random Forest"}
+    ]
+  },
+  {
+    title:"Boosting",
+    content:[
+      {text:"Adaboost"},
+      {text:"GBDT"},
+      {text:"XGBoost"}
+    ]
+  },
+  {
+    title:"MLP",
+    content:[
+      {text:"MLP-ReLu"},
+      {text:"MLP-Tanh"},
+      {text:"MLP-Sigmoid"}
+    ]
+  },
+  {
+    title:"CNN",
+    content:[
+      {text:"Recursive NN"},
+      {text:"LCNN"},
+      {text:"CNN-Core"},
+      {text:"TCNN"},
+      {text:"CNN+B"},
+      {text:"TNCNN"}
+    ]
+  },
+  {
+    title:"RNN",
+    content:[
+      {text:"VAE-RNN"},
+      {text:"CRNN"},
+      {text:"LSTM"},
+      {text:"GRU"},
+      {text:"BRNN"},
+      {text:"NTRNN"}
+    ]
+  },
+  {
+    title:"GCN",
+    content:[
+      {text:"GCN"},
+      {text:"IGCN"},
+      {text:"ICDSBA"},
+      {text:"MGGCN"},
+      {text:"OD-GCN"},
+      {text:"MER-GCN"}
+    ]
+  },
+  {
+    title:"GAN",
+    content:[
+      {text:"VAE"},
+      {text:"CYGEN"},
+      {text:"CQ-VAE"},
+      {text:"Co-VAE"},
+      {text:"MMCD VAE"},
+      {text:"CAE-VAE"}
+    ]
+  },
+  {
+    title:"Transformer",
+    content:[
+      {text:"KoTAB"},
+      {text:"MF-BERT"},
+      {text:"Doc-RBERT"},
+      {text:"BERT-Bi-LSTM"},
+      {text:"BERT-CRF"},
+      {text:"DA-BERT"}
+    ]
+  },
+  {
+    title:"VGC-NET",
+    content:[
+      {text:"VGC-NET"}
+    ]
+  },
+  {
+    title:"Nerual ODE",
+    content:[
+      {text:"NODE"}
+    ]
+  },
+  {
+    title:"Spike NN",
+    content:[
+      {text:"SNN"}
+    ]
+  },
+  {
+    title:"Fourier NN",
+    content:[
+      {text:"FNN"}
+    ]
+  },
+]
+
+module.exports = {
+  ificationContent
+}

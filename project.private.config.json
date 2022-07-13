@@ -1,0 +1,24 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "yanbao",
+          "pathName": "pages/yanbao/yanbao",
+          "query": "id=&title=%E7%A0%94%E6%8A%A5",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
+}

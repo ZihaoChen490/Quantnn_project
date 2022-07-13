@@ -1,0 +1,70 @@
+{
+    "pages": [
+        "pages/holes/holes",
+        "pages/polices/polices",
+        "pages/polices/gotouse/gotouse",
+        "pages/index/index",
+        "pages/profile/index",
+        "pages/search/search",
+        "pages/auth/index",
+        "pages/yanbao/yanbao",
+        "pages/instructions/instructions",
+        "pages/videolessons/videolessons",
+        "pages/AIlab/AIlab",
+        "pages/selectstock/selectstock",
+        "pages/selecttime/selecttime"
+    ],
+    "window": {
+      "navigationStyle": "custom",
+      "backgroundTextStyle": "dark",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "Quantnn",
+      "navigationBarTextStyle": "black",
+      "onReachBottomDistance": 50
+    },
+    "tabBar": {
+        "backgroundColor": "#f7f7f7",
+        "color": "#8a8a8a",
+        "selectedColor": "#337559",
+        "borderStyle": "white",
+        "list": [
+          {
+            "pagePath": "pages/holes/holes",
+            "text": "",
+            "iconPath": "images/icon_tab/social.jpg",
+            "selectedIconPath": "images/icon_tab/social_h1.jpg"
+          },
+          {
+            "pagePath": "pages/polices/polices",
+            "text": "",
+            "iconPath": "images/icon_tab/firstpage.jpg",
+            "selectedIconPath": "images/icon_tab/firstpage_h1.jpg"
+          },
+          {
+            "pagePath": "pages/profile/index",
+            "text": "",
+            "iconPath": "images/icon_tab/myself.jpg",
+            "selectedIconPath": "images/icon_tab/myself_h1.jpg"
+          }
+        ]
+      },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "style":"v2",
+    "debug": true,
+    "sitemapLocation": "sitemap.json",
+    "useExtendedLib": {
+      "weui" : true
+    },
+    "usingComponents": {
+      "mp-form-page": "weui-miniprogram/form-page/form-page",
+      "mp-form": "weui-miniprogram/form/form",
+      "mp-toptips": "weui-miniprogram/toptips/toptips",
+      "mp-cells": "weui-miniprogram/cells/cells",
+      "mp-cell": "weui-miniprogram/cell/cell",
+      "mp-checkbox": "weui-miniprogram/checkbox/checkbox",
+      "mp-checkbox-group": "weui-miniprogram/checkbox-group/checkbox-group"
+    }
+}
