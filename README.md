@@ -1,2 +1,4 @@
 # Quantnn_project
-An Wechat Mini Program for Quant community and stock selection
+An Wechat Mini Program for Quant community and stock selection.
+
+This quantitative platform for the public aims to create a quantitative community, allowing anyone interested in investing in stocks to share and post, while providing an AI lab that allows users to predict the trend of individual stocks through machine learning methods and select the corresponding stocks through machine learning methods. For users who lack experiences, we will provide video courses and let experienced users exchange ideas and knowledge. For the average user, we will open up both the custom strategy feature and other user-made, proven strategy provisioning options. The current quantification platform aims to popularize machine learning knowledge and improve the public's understanding and cognition of quantification.
